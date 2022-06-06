@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DropItem : MonoBehaviour
 {
+    public Sprite ItemImage;
     public float GravityScale;
     private Vector2 startPosition;
 
