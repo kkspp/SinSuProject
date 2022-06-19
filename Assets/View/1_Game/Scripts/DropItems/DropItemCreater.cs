@@ -6,8 +6,6 @@ public class DropItemCreater : MonoBehaviour
 {
     [SerializeField]
     private List<GameObject> dropItemPrefabs;
-    [SerializeField]
-    private GameObject selectedDropItem;
 
     public bool isActivatied;
 
@@ -23,10 +21,11 @@ public class DropItemCreater : MonoBehaviour
         {
             int selectedItemIndex = Random.Range(0, 6);
             int randomGravityScale = Random.Range(0, 6) * 15;
-            DropItem dropItem = Instantiate(dropItemPrefabs[selectedItemIndex]).GetComponent<DropItem>();
+            int randomTime = Random.Range(0, 3);
+            float randomDropItemPosX = Random.Range(-Screen.width, Screen.width) / 2;
+            DropItem dropItem = Instantiate(dropItemPrefabs[selectedItemIndex], new Vector2(randomDropItemPosX, Screen.height+150), Quaternion.Euler(Vector3.zero), transform).GetComponent<DropItem>();
             dropItem.GravityScale = randomGravityScale;
-            yield return null;
-
+            yield return new WaitForSeconds(randomTime);
         }
         
     }
