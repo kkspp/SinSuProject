@@ -19,12 +19,4 @@ public class DropItem : MonoBehaviour
     {
         startPosition = GetComponent<RectTransform>().anchoredPosition;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // test code for reset position
-        GetComponent<RectTransform>().anchoredPosition = startPosition;
-        gameObject.SetActive(false);
-        gameObject.SetActive(true);
-        GetComponent<Rigidbody2D>().gravityScale = Random.Range(50, 80);
-    }
 }
