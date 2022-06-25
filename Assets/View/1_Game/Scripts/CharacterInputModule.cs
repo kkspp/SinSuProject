@@ -25,16 +25,13 @@ public class CharacterInputModule : MonoBehaviour
     {
         Vector2 direction = Vector2.right * joystic.Horizontal;
         userRigidbody.AddForce(direction * moveSpeed * Time.fixedDeltaTime, ForceMode2D.Impulse);
-
-        if (characterRectTransform.anchoredPosition.x <= (-Screen.width + CharacterWidth) / 2.0f)
-            characterRectTransform.anchoredPosition = new Vector2((-Screen.width + CharacterWidth) / 2.0f, characterRectTransform.anchoredPosition.y);
-        else if (characterRectTransform.anchoredPosition.x >= (Screen.width - CharacterWidth) / 2.0f)
-            characterRectTransform.anchoredPosition = new Vector2((Screen.width - CharacterWidth) / 2.0f, characterRectTransform.anchoredPosition.y);
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //collision.GetComponent<DropItem>().
+        if(collision.GetComponent<DropItem>() != null)
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
