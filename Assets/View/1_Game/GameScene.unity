@@ -526,6 +526,7 @@ GameObject:
   - component: {fileID: 1085398744}
   - component: {fileID: 1085398743}
   - component: {fileID: 1085398745}
+  - component: {fileID: 1085398746}
   m_Layer: 5
   m_Name: BottomGround
   m_TagString: Untagged
@@ -603,7 +604,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 250}
+  m_Offset: {x: 0, y: 80}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -616,6 +617,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1440, y: 500}
   m_EdgeRadius: 0
+--- !u!114 &1085398746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085398741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d03fbd7c81b0ca84580c91a93092cd84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1092798387
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,7 +919,7 @@ GameObject:
   - component: {fileID: 2132966864}
   - component: {fileID: 2132966865}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: DropItemCreater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -951,4 +964,3 @@ MonoBehaviour:
   - {fileID: 4358001798062132728, guid: 3e9f696df51f54e43a70e174589682d1, type: 3}
   - {fileID: 4304616135254570456, guid: 43d85e70da9cf224fa81e71d0aa4cf40, type: 3}
   - {fileID: 7469193464811727990, guid: 3f29a4a003fe1bc4bbd183d273fa68e7, type: 3}
-  isActivatied: 0

@@ -19,5 +19,4 @@ public class DropItem : MonoBehaviour
     {
         startPosition = GetComponent<RectTransform>().anchoredPosition;
     }
-    
 }
