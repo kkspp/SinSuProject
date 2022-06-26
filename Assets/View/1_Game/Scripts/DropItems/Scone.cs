@@ -4,4 +4,8 @@ using UnityEngine;
 
 public class Scone : DropItem
 {
+    private void Awake()
+    {
+        ItemName = "Scone";
+    }
 }
