@@ -5,8 +5,4 @@ using UnityEngine.UI;
 
 public class Cookie : DropItem
 {
-    private void Awake()
-    {
-        ItemName = "Cookie";
-    }
 }

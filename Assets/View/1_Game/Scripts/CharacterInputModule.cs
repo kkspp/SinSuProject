@@ -17,6 +17,8 @@ public class CharacterInputModule : MonoBehaviour
     {
         characterRectTransform = GetComponent<RectTransform>();
         userRigidbody = GetComponent<Rigidbody2D>();
+
+        Debug.Log(CharacterWidth / 2.0f);
     }
 
     private void FixedUpdate()
@@ -29,16 +31,7 @@ public class CharacterInputModule : MonoBehaviour
     {
         if(collision.GetComponent<DropItem>() != null)
         {
-            GetItem(collision);
             Destroy(collision.gameObject);
-        }
-    }
-
-    private void GetItem(Collider2D collision)
-    {
-        if(collision.gameObject.GetComponent<DropItem>().ItemName == "Coin")
-        {
-            ScoreManager.Instance.GetCoin();
         }
     }
 }

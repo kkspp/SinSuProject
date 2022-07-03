@@ -7,12 +7,6 @@ public class DropItem : MonoBehaviour
     public Sprite ItemImage;
     public float GravityScale;
     private Vector2 startPosition;
-    private string itemName;
-    public string ItemName
-    {
-        get { return itemName; }
-        set { itemName = value; }
-    }
 
     public void InitPosition()
     {

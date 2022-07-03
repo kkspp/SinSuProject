@@ -4,8 +4,4 @@ using UnityEngine;
 
 public class Cake : DropItem
 {
-    private void Awake()
-    {
-        ItemName = "Cake";
-    }
 }
