@@ -8,7 +8,7 @@ public class DropItemDestroyer : MonoBehaviour
     {
         if(collision.GetComponent<DropItem>() != null)
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
     }
 }

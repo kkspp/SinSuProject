@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -22,10 +23,51 @@ public class ScoreManager : MonoBehaviour
     }
 
     [SerializeField]
-    private TMP_Text coinScoreText;
+    public List<int> GetItemCounter;
 
-    public void GetCoin()
+    [SerializeField]
+    private TMP_Text coinScoreText;
+    
+    public void GetItem(DropItem item)
     {
-        CoinScore += 1;
+        switch (item.Name)
+        {
+            case DropItem.ItemCase.Cake:
+                break;
+            case DropItem.ItemCase.Coin:
+                CoinScore += 1;
+                break;
+            case DropItem.ItemCase.Cookie:
+                break;
+            case DropItem.ItemCase.Donut:
+                break;
+            case DropItem.ItemCase.Sandwich:
+                break;
+            case DropItem.ItemCase.Scone:
+                break;
+            case DropItem.ItemCase.UpgradeHat:
+                break;
+            case DropItem.ItemCase.BugItem:
+                //Todo : 1.CharacterAnimation 2.Score or interaction
+                Debug.LogWarning("Oh my god!!");
+                break;
+        }
+
+        GetItemCounter[(int)item.Name]++;
+        item.gameObject.SetActive(false);
+    }
+
+    private void Start()
+    {
+        ResetItemCounter();
+    }
+
+    private void ResetItemCounter()
+    {
+        DropItem.ItemsCount = Enum.GetNames(typeof(DropItem.ItemCase)).Length;
+        for (int i=0; i < DropItem.ItemsCount; i++)
+        {
+            GetItemCounter.Add(0);
+        }
     }
 }
