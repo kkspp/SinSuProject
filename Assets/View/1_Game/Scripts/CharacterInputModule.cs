@@ -27,18 +27,10 @@ public class CharacterInputModule : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.GetComponent<DropItem>() != null)
+        DropItem getItem = collision.gameObject.GetComponent<DropItem>();
+        if (getItem != null)
         {
-            GetItem(collision);
-            Destroy(collision.gameObject);
-        }
-    }
-
-    private void GetItem(Collider2D collision)
-    {
-        if(collision.gameObject.GetComponent<DropItem>().ItemName == "Coin")
-        {
-            ScoreManager.Instance.GetCoin();
+            ScoreManager.Instance.GetItem(getItem);
         }
     }
 }

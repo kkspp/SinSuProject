@@ -1,17 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DropItem : MonoBehaviour
 {
+    public static int ItemsCount;
+
     public Sprite ItemImage;
     public float GravityScale;
     private Vector2 startPosition;
-    private string itemName;
-    public string ItemName
+    public ItemCase Name;
+
+    public enum ItemCase
     {
-        get { return itemName; }
-        set { itemName = value; }
+        Cake = 0,
+        Coin,
+        Cookie,
+        Donut,
+        Sandwich,
+        Scone,
+        UpgradeHat,
+        BugItem
     }
 
     public void InitPosition()

@@ -6,6 +6,6 @@ public class Cake : DropItem
 {
     private void Awake()
     {
-        ItemName = "Cake";
+        Name = ItemCase.Cake;
     }
 }
