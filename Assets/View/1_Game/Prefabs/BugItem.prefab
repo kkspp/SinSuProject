@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 17484e338411cf14fb33df6f8f102093, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a89277b23c3006418cfd160f482f32c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemImage: {fileID: 0}
+  ItemImage: {fileID: 21300000, guid: 17484e338411cf14fb33df6f8f102093, type: 3}
   GravityScale: 0
   Name: 0
+  isGoomItem: 0
