@@ -7556,6 +7556,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ae3bd7705904141bbad8f870d778fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterImage: {fileID: 1793184113}
+  normalBear: {fileID: 21300000, guid: a9ed183ab3cedb340993c4eb9c4e840e, type: 3}
+  smileBear: {fileID: 21300000, guid: 52fe3acf4332d634bb45168c80512985, type: 3}
+  cryBear: {fileID: 21300000, guid: a2e8e7b9f1d39ca499b0c54e260b59a7, type: 3}
   joystic: {fileID: 1976054917}
   moveSpeed: 4000
 --- !u!114 &1793184113

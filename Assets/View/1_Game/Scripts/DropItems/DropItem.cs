@@ -11,6 +11,7 @@ public class DropItem : MonoBehaviour
     public float GravityScale;
     private Vector2 startPosition;
     public ItemCase Name;
+    public bool isGoomItem;
 
     public enum ItemCase
     {

@@ -152,3 +152,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemImage: {fileID: 21300000, guid: 4233bedcc21044b4abe639d232069573, type: 3}
   GravityScale: 0
+  Name: 0
+  isGoomItem: 1
