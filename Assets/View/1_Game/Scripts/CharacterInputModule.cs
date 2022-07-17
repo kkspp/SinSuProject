@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,8 @@ public class CharacterInputModule : MonoBehaviour
     private Sprite smileBear;
     [SerializeField]
     private Sprite cryBear;
+    [SerializeField]
+    private EatSoundEffector eatSoundEffector;
     [SerializeField]
     private Joystick joystic;
     [SerializeField]
@@ -44,17 +47,23 @@ public class CharacterInputModule : MonoBehaviour
             ScoreManager.Instance.GetItem(getItem);
             StopCoroutine("ChangeFace");
             StartCoroutine(ChangeFace());
+            
+            if(!getItem.isGoomItem)
+                Vibration.CreateOneShot(300);
         }
     }
 
     private IEnumerator ChangeFace()
     {
+        //sound effect
+        eatSoundEffector.PlayAudio(lastGetItem.isGoomItem);
+
         if (lastGetItem.isGoomItem)
             characterImage.sprite = smileBear;
         else
             characterImage.sprite = cryBear;
 
-        yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(1.0f);
 
         characterImage.sprite = normalBear;
     }
